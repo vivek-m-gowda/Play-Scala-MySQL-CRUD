@@ -10,12 +10,17 @@ GET     /                           controllers.HomeController.index()
 GET     /assets/*file               controllers.Assets.versioned(path="/public", file: Asset)
 
 
+# To add new user to Database
 POST        /users                 controllers.UserController.create
 
+# To get a user by id from database
 GET         /users/:id             controllers.UserController.get(id: Long)
 
+# To get all users from database
 GET         /users                 controllers.UserController.getAll
 
+# To update existing users in database
 PUT         /users/:id             controllers.UserController.update(id: Long)
 
+# To delete user from Database
 DELETE      /users/:id             controllers.UserController.delete(id: Long)
